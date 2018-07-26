@@ -1,0 +1,8 @@
+[
+  "tests.py::WebTestCase::test_add",
+  "tests.py::WebTestCase::test_divide",
+  "tests.py::WebTestCase::test_index_instructions",
+  "tests.py::WebTestCase::test_multiply",
+  "tests.py::WebTestCase::test_subtract_negative_result",
+  "tests.py::WebTestCase::test_subtract_positive_result"
+]

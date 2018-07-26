@@ -74,9 +74,23 @@ def multiply(*args):
 
     # TODO: Fill sum with the correct value, based on the
     # args provided.
-    multiplier = str(args[0] / args[1])
+    multiplier = str(args[0] * args[1])
     return multiplier
 
+
+def readme(*args):
+
+    return '''<h1>WSGI Calculator</h1>
+
+    <p>Use the webpages address to add, subtract, multiply, and divide functions in the format below:</p>
+    <ul>
+
+    <li><a href="http://localhost:8080/multiply/3/5" rel="nofollow">http://localhost:8080/multiply/3/5 </a> =&gt; 15</li>
+    <li><a href="http://localhost:8080/add/23/42" rel="nofollow">http://localhost:8080/add/23/42 </a> =&gt; 65</li>
+    <li><a href="http://localhost:8080/subtract/23/42" rel="nofollow">http://localhost:8080/subtract/23/42 </a> =&gt; -19</li>
+    <li><a href="http://localhost:8080/divide/22/11" rel="nofollow">http://localhost:8080/divide/22/11 </a> =&gt; 2</li>
+    
+    </ul>'''
 
 # TODO: Add functions for handling more arithmetic operations.
 
@@ -95,7 +109,7 @@ def resolve_path(path):
     path = path.strip('/').split('/')   #  now ive got something like                                     #  ["add", "3","4"]
     func_name = path.pop(0)  # "add" and ["3", "4"]
     args = [int(arg) for arg in path]  # args is now ["3","4"]
-    funcs = {
+    funcs = {'': readme,
             'add': add,
             'subtract': subtract,
             'multiply': multiply,
